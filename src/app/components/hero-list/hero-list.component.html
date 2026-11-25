@@ -1,0 +1,47 @@
+<h2>Lista de personagens</h2>
+<br /><br />
+<!-- INTERPOLAÇÂO DE VARIAVEIS -->
+<h3>Destaque: {{ heroiDestaque }}</h3>
+<p>Universo: {{ universo }}</p>
+<br /><br />
+<!-- Property Binding: [propriedade]="expressao"  -->
+<button [disabled]="estaDesabilitado" [title]="dicaTooltip">
+  Ação do Herói
+</button>
+<br /><br />
+
+<!-- Event Binding: (evento)="metodo()" (HTML ➔ Classe) -->
+<button (click)="alternarStatus()">Alternar Status</button>
+<span>Status atual: {{ ativo ? "Ativo" : "Inativo" }}</span>
+<br /><br />
+
+<!-- Two-Way Data Binding: [(ngModel)]="propriedade" (Sincronia Dupla) -->
+<input type="text" [(ngModel)]="heroiDestaque" />
+<p>Você está editando: {{ heroiDestaque }}</p>
+
+<ul>
+  <li *ngFor="let heroi of equipe">
+    {{ heroi }}
+  </li>
+</ul>
+
+<mat-card>
+  <!-- 1. Cabeçalho com avatar, título e subtítulo -->
+  <mat-card-header>
+    <mat-icon mat-card-avatar color="primary">shield</mat-icon>
+    <mat-card-title>Homem de Ferro</mat-card-title>
+    <mat-card-subtitle>Marvel</mat-card-subtitle>
+  </mat-card-header>
+
+  <!-- 2. Corpo de texto e conteúdo principal -->
+  <mat-card-content>
+    <p>Armadura de alta tecnologia</p>
+  </mat-card-content>
+
+  <!-- 3. Barra de ações e botões interativos -->
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary">Detalhes</button>
+  </mat-card-actions>
+</mat-card>
+
+
