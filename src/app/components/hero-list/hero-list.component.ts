@@ -24,5 +24,4 @@ export class HeroListComponent {
   }
 
   equipe: string[] = ['Homem de Ferro', 'Batman', 'Tempestade', 'Asa Noturna', 'Mulher Maravilha'];
-
 }
